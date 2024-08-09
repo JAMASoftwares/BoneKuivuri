@@ -1,0 +1,12 @@
+# Local project information for developer
+info.txt
+todo.txt
+
+# Ignore all __pycache__ folders
+**/__pycache__/
+
+# Ignore .jpg images in 'captures' folder and its subdirectories, but keep the folders
+captures/**/*.jpg
+
+# Other file types/extensions
+*.save
