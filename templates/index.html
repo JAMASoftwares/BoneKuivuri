@@ -1,0 +1,205 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+<!-- Page title -->
+{% block title %}
+<title>BoneWeb - Kuivuri</title>
+{% endblock title %}
+<!-- Style block -->
+{% block styles %}
+
+{% endblock styles %}
+
+
+<!-- Content block -->
+{% block content %}
+
+<div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="leftcolumn">
+        <!-- CARD 1 -->
+        <div class="card">
+            <h2>KYTKENTÄ KARTTA</h2>
+            <div class="gallery-a">
+                <!-- Main Image -->
+                <div class="main-image">
+                    <img  class="zoomable-image" src={{ url_for( 'static', filename='img/BBB_pinmap.png') }} id="mainImage">
+                </div>
+                <!-- Thumbnails -->
+                <div class="thumbnails">
+                    <img src={{ url_for( 'static', filename='img/BBB_pinmap.png') }} class="thumb">
+                    <img src={{ url_for( 'static', filename='img/bbb_gpio_pinmap.png') }} class="thumb">
+                    <img src={{ url_for( 'static', filename='img/bb-board-white.png') }} class="thumb">
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card wide_table">
+            <h2>JÄRJESTELMÄTIEDOT</h2>
+            {% for layer_key, layer_value in dict3D.items() %}
+            <h2>System Info: {{ layer_key }}</h2>
+            <div class='table_container'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th> <!-- Add a column header for the keys -->
+                            {% for col in headers_per_layer[layer_key] %}
+                            <th>{{ col }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row_key, row_value in layer_value.items() %}
+                        <tr>
+                            <td class='key_cell'>{{ row_key }}</td> <!-- Include the key as the first cell in each row -->
+                            {% if row_value is mapping %}
+                            {% for col in headers_per_layer[layer_key] %}
+                            <td>{{ row_value[col] if col in row_value else '' }}</td>
+                            {% endfor %}
+                            {% else %}
+                            <td colspan="{{ headers_per_layer[layer_key]|length + 1 }}">{{ row_value }}</td>
+                            {% endif %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card narrow_table">
+            {% for layer_key, layer_value in dict3D.items() %}
+            <h2>System Info: {{ layer_key }}</h2>
+            {% for sub_key, sub_value in layer_value.items() %}
+            <div class='table_container'>
+                <table class="first_col_empty">
+                    <thead>
+                        <tr>
+                            <th colspan='3'>{{ sub_key }}</th> <!-- Second-level key spans all columns -->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if sub_value is mapping %}
+                        {% for key, value in sub_value.items() %}
+                        <tr>
+                            <!--<td class='empty_cell'></td>-->
+                            <td class='key_cell'>{{ key }}</td>
+                            <td class='value_cell'>{{ value }}</td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+                        <!-- Handle non-mapping values -->
+                        <tr>
+                            <td colspan="3">{{ sub_value }}</td>
+                        </tr>
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+            {% endfor %}
+        {% endfor %}
+        </div>
+
+        <!-- CARD 4 -->
+        <div id="lower" class="card">
+            <h2>MIKROKONTROLLERI - BEAGLEBONE BLACK</h2>
+            <div class="gallery-flex" id="gallery">
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-board-f1.jpg') }}></div>
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-board-f2.jpg') }}></div>
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-board-up.jpg') }}></div>
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-board-bottom.jpg') }}></div>
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-case1.jpg') }}></div>
+                <div class="zoom1"><img class="zoomable-image" src={{ url_for( 'static', filename='img/bb-case2.jpg') }}></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="rightcolumn">
+        <!-- CARD: RIGHT-A -->
+        <div class="card">
+            <div class="flex_horizontal">
+                <h2>GPIO HALLINTA</h2>
+                <label class="switch">
+                    <input id='gpio_toggle' type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div id="gpio_panel" class="flex_horizontal accordion_panel">
+                <div class="pin_layout" id='chipp9'>
+                    {% for key, value in result['P9'].items() %}
+                        {% if value[2] == '0' and value[0] != "in" %}
+                        <a href={{ value[3] }} class='pin zoom state_0'>{{ key }}</a>
+                        {% elif value[2] == '1' and value[0] != "in" %}
+                        <a href={{ value[3] }} class='pin zoom state_1'>{{ key }}</a>
+                        {% else %}
+                        <a href={{ value[3] }} class='pin state_d'>{{ key }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="pin_layout" id='chipp8'>
+                    {% for key, value in result['P8'].items() %}
+                        {% if value[2] == '0' and value[0] != "in" %}
+                        <a href={{ value[3] }} class='pin zoom state_0'>{{ key }}</a>
+                        {% elif value[2] == '1' and value[0] != "in" %}
+                        <a href={{ value[3] }} class='pin zoom state_1'>{{ key }}</a>
+                        {% else %}
+                        <a href={{ value[3] }} class='pin state_d'>{{ key }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD: RIGHT-C -->
+        <div class="card">
+            <div class="flex_horizontal">
+                <h2>ASETUS I/O</h2>
+                <label class="switch">
+                    <input id='setio_toggle' type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            <div id="setio_panel" class="flex_horizontal accordion_panel">
+                <div class="pin_layout">
+                    {% for key, value in result['P9'].items() %}
+                        {% if value[0] == 'out' %}
+                        <a href={{ value[1] }} class='pin zoom state_out'>{{ key }}</a>
+                        {% elif value[0] == 'in' %}
+                        <a href={{ value[1] }} class='pin zoom state_in'>{{ key }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="pin_layout">
+                    {% for key, value in result['P8'].items() %}
+                        {% if value[0] == 'out' %}
+                        <a href={{ value[1] }} class='pin zoom state_out'>{{ key }}</a>
+                        {% elif value[0] == 'in' %}
+                        <a href={{ value[1] }} class='pin zoom state_in'>{{ key }}</a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD: RIGHT-D -->
+        <div class="card">
+            <div class="flex_horizontal">
+                <h2>LÄHDEKOODI</h2>
+                <div class="flex_vertical">
+                    <a href="https://github.com/JABE22"><img id="git-logo" class="center zoom1" src={{ url_for( 'static', filename='img/git-logo-hor.png') }}></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUDE JAVASCRIPTS -->
+    <script type="text/javascript" src={{ url_for( 'static', filename='js/global.js') }}></script>
+    <script type="text/javascript" src={{ url_for( 'static', filename='js/gpioctrl.js') }}></script>
+    <script type="text/javascript" src={{ url_for('static', filename='js/gpiosetio.js') }}></script>
+    <script type="text/javascript" src={{ url_for( 'static', filename='js/gallery.js') }}></script>
+    <script type="text/javascript" src={{ url_for( 'static', filename='js/table.js') }}></script>
+</div>
+
+{% endblock content %}

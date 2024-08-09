@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+<!-- Page title -->
+{% block title %}
+<title>BoneKuivuri - Kamera</title>
+{% endblock title %}
+<!-- Style block -->
+{% block styles %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+
+<div class="row">
+    <!-- LEFT COLUMN -->
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>SIILON TILANNEKUVA</h2>
+            <div class='flex_horizontal_right'>
+                <a class='button' id='save_button'> Tallenna </a>
+                <a class='button' id='capture_button'> Päivitä </a>
+            </div>
+            <div class="capture">
+                <img id='org-img' class='responsive-100' src="{{ url_for('serve_capture', filename='temp_original.jpg') }}" alt="Original">
+            </div>
+        </div>
+    </div>
+    <!-- RIGHT COLUMN -->
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>Tallennetut Kuvat</h2>
+            <div class="gallery-grid" id="gallery"></div>
+        </div>
+    </div>
+</div>
+
+<!-- INCLUDE JAVASCRIPTS -->
+<script type="text/javascript" src={{ url_for( 'static', filename='js/global.js') }}></script>
+<script type="text/javascript" src={{ url_for( 'static', filename='js/camera.js') }}></script>
+<script type="text/javascript" src={{ url_for( 'static', filename='js/gallery.js') }}></script>
+
+{% endblock content %}

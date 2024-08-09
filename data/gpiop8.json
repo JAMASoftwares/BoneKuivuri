@@ -1,0 +1,162 @@
+{
+    "P8_11": {
+        "gpio": "gpio45",
+        "pin": "P8_11",
+        "dir": "out",
+        "switch": "/P8_11/toggle",
+        "io": "/P8_11/io",
+        "path": "/sys/class/gpio/gpio45"
+    },
+    "P8_12": {
+        "gpio": "gpio44",
+        "pin": "P8_12",
+        "dir": "out",
+        "switch": "/P8_12/toggle",
+        "io": "/P8_12/io",
+        "path": "/sys/class/gpio/gpio44"
+    },
+    "P8_13": {
+        "gpio": "gpio23",
+        "pin": "P8_13",
+        "dir": "out",
+        "switch": "/P8_13/toggle",
+        "io": "/P8_13/io",
+        "path": "/sys/class/gpio/gpio23"
+    },
+    "P8_14": {
+        "gpio": "gpio26",
+        "pin": "P8_14",
+        "dir": "out",
+        "switch": "/P8_14/toggle",
+        "io": "/P8_14/io",
+        "path": "/sys/class/gpio/gpio26"
+    },
+    "P8_15": {
+        "gpio": "gpio47",
+        "pin": "P8_15",
+        "dir": "out",
+        "switch": "/P8_15/toggle",
+        "io": "/P8_15/io",
+        "path": "/sys/class/gpio/gpio47"
+    },
+    "P8_16": {
+        "gpio": "gpio46",
+        "pin": "P8_16",
+        "dir": "out",
+        "switch": "/P8_16/toggle",
+        "io": "/P8_16/io",
+        "path": "/sys/class/gpio/gpio46"
+    },
+    "P8_17": {
+        "gpio": "gpio27",
+        "pin": "P8_17",
+        "dir": "out",
+        "switch": "/P8_17/toggle",
+        "io": "/P8_17/io",
+        "path": "/sys/class/gpio/gpio27"
+    },
+    "P8_18": {
+        "gpio": "gpio65",
+        "pin": "P8_18",
+        "dir": "out",
+        "switch": "/P8_18/toggle",
+        "io": "/P8_18/io",
+        "path": "/sys/class/gpio/gpio65"
+    },
+    "P8_19": {
+        "gpio": "gpio22",
+        "pin": "P8_19",
+        "dir": "out",
+        "switch": "/P8_19/toggle",
+        "io": "/P8_19/io",
+        "path": "/sys/class/gpio/gpio22"
+    },
+    "P8_20": {
+        "gpio": "gpio63",
+        "pin": "P8_20",
+        "dir": "out",
+        "switch": "/P8_20/toggle",
+        "io": "/P8_20/io",
+        "path": "/sys/class/gpio/gpio63"
+    },
+    "P8_21": {
+        "gpio": "gpio62",
+        "pin": "P8_21",
+        "dir": "out",
+        "switch": "/P8_21/toggle",
+        "io": "/P8_21/io",
+        "path": "/sys/class/gpio/gpio62"
+    },
+    "P8_22": {
+        "gpio": "gpio37",
+        "pin": "P8_22",
+        "dir": "out",
+        "switch": "/P8_22/toggle",
+        "io": "/P8_22/io",
+        "path": "/sys/class/gpio/gpio37"
+    },
+    "P8_23": {
+        "gpio": "gpio36",
+        "pin": "P8_23",
+        "dir": "out",
+        "switch": "/P8_23/toggle",
+        "io": "/P8_23/io",
+        "path": "/sys/class/gpio/gpio36"
+    },
+    "P8_24": {
+        "gpio": "gpio33",
+        "pin": "P8_24",
+        "dir": "out",
+        "switch": "/P8_24/toggle",
+        "io": "/P8_24/io",
+        "path": "/sys/class/gpio/gpio33"
+    },
+    "P8_25": {
+        "gpio": "gpio32",
+        "pin": "P8_25",
+        "dir": "out",
+        "switch": "/P8_25/toggle",
+        "io": "/P8_25/io",
+        "path": "/sys/class/gpio/gpio32"
+    },
+    "P8_26": {
+        "gpio": "gpio61",
+        "pin": "P8_26",
+        "dir": "out",
+        "switch": "/P8_26/toggle",
+        "io": "/P8_26/io",
+        "path": "/sys/class/gpio/gpio61"
+    },
+    "P8_27": {
+        "gpio": "gpio86",
+        "pin": "P8_27",
+        "dir": "out",
+        "switch": "/P8_27/toggle",
+        "io": "/P8_27/io",
+        "path": "/sys/class/gpio/gpio86"
+    },
+    "P8_28": {
+        "gpio": "gpio88",
+        "pin": "P8_28",
+        "dir": "out",
+        "switch": "/P8_28/toggle",
+        "io": "/P8_28/io",
+        "path": "/sys/class/gpio/gpio88"
+    },
+    "P8_29": {
+        "gpio": "gpio87",
+        "pin": "P8_29",
+        "dir": "out",
+        "switch": "/P8_29/toggle",
+        "io": "/P8_29/io",
+        "path": "/sys/class/gpio/gpio87"
+    },
+    "P8_30": {
+        "gpio": "gpio89",
+        "pin": "P8_30",
+        "dir": "out",
+        "switch": "/P8_30/toggle",
+        "io": "/P8_30/io",
+        "path": "/sys/class/gpio/gpio89"
+    }
+}

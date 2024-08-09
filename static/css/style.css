@@ -1,0 +1,36 @@
+/* Site properties */
+
+:root {
+    /* Site colors */
+    --site-main-color: #3D3B40;
+    --site-subcolor-first: #57b3fe;
+    /* rgb(87,179,254) <= Corresponding RGB color code */
+    --site-subcolor-second: #BFCFE7;
+    /* Button colors */
+    --button-text-color: white;
+    --button-color-disabled: #bfbfbf;
+    --button-color-off: #959595;
+    --button-color-on: #C5E0B3;
+    --site-color-bg: rgba(222, 222, 222, .8);
+    --site-font-family: Teko;
+    /* Navbar properties */
+    --navbar-font-size: 1.2rem;
+    --navbar-submenu-font-size: 1.1rem;
+    --navbar-color-bg: #333;
+    --navbar-color-active: #bfbfbf;
+    /* Text properties */
+    --text-main-color: whitesmoke;
+    --text-subcolor-inverse: #3D3B40;
+    --text-fontsize-large: 3.0rem;
+    --text-fontsize-medium: 2.5rem;
+    --text-fontsize-small: 1.5rem;
+    --card-bg-color: white;
+    /* Common containers */
+    --container-bg-color: transparent;
+    /* Margins and paddings */
+    --global-padding: 10px;
+    --global-margin: 10px;
+    --global-padding-a: 15px;
+    --global-padding-b: 12px;
+
+}

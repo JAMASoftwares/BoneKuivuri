@@ -1,0 +1,37 @@
+{
+    "P9_33": {
+        "name": "AIN4",
+        "pin": "P9_33",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage4_raw"
+    },
+    "P9_35": {
+        "name": "AIN6",
+        "pin": "P9_35",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage6_raw"
+    },
+    "P9_36": {
+        "name": "AIN5",
+        "pin": "P9_36",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage5_raw"
+    },
+    "P9_37": {
+        "name": "AIN2",
+        "pin": "P9_37",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage2_raw"
+    },
+    "P9_38": {
+        "name": "AIN3",
+        "pin": "P9_38",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage3_raw"
+    },
+    "P9_39": {
+        "name": "AIN0",
+        "pin": "P9_39",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage0_raw"
+    },
+    "P9_40": {
+        "name": "AIN1",
+        "pin": "P9_40",
+        "path": "/sys/bus/iio/devices/iio:device0/in_voltage1_raw"
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html> 
+{% extends "base.html" %}
+<!-- Page title -->
+{% block title %}
+<title>BoneWeb - Home</title>
+{% endblock title %}
+<!-- Style block -->
+{% block styles %}
+<!-- No extra styles for home -->
+{% endblock styles %}
+
+<!-- Content block -->
+{% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<canvas id="volt_chart" width="900" height="400"></canvas>
+<script type="text/javascript">
+
+    // CHART
+    var ctx = document.getElementById("volt_chart");
+    var chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: {{ labels | safe }},
+            datasets: [
+                {
+                label: "AIN Voltages",
+                data: {{ values | safe }},
+                borderColor: 'rgb(100, 175, 175)',
+                lineTension: 0.1
+                
+            }
+        ]
+        },
+        options: {
+            scales: {
+                yAxes: [
+                    {
+                min: 0,
+                max: 13,
+                stepSize: 0.1,
+                    ticks: {
+                        beginAtZero:true,
+                    }
+                }
+            ]
+            }
+        }
+    });
+
+</script>
+<br>
+<a href="/">Home</a>
+
+{% endblock content %}

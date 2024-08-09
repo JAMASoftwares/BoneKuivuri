@@ -1,0 +1,162 @@
+{
+    "P9_11": {
+        "gpio": "gpio30",
+        "pin": "P9_11",
+        "dir": "out",
+        "switch": "/P9_11/toggle",
+        "io": "/P9_11/io",
+        "path": "/sys/class/gpio/gpio30"
+    },
+    "P9_12": {
+        "gpio": "gpio60",
+        "pin": "P9_12",
+        "dir": "out",
+        "switch": "/P9_12/toggle",
+        "io": "/P9_12/io",
+        "path": "/sys/class/gpio/gpio60"
+    },
+    "P9_13": {
+        "gpio": "gpio31",
+        "pin": "P9_13",
+        "dir": "out",
+        "switch": "/P9_13/toggle",
+        "io": "/P9_13/io",
+        "path": "/sys/class/gpio/gpio31"
+    },
+    "P9_14": {
+        "gpio": "gpio50",
+        "pin": "P9_14",
+        "dir": "out",
+        "switch": "/P9_14/toggle",
+        "io": "/P9_14/io",
+        "path": "/sys/class/gpio/gpio50"
+    },
+    "P9_15": {
+        "gpio": "gpio48",
+        "pin": "P9_15",
+        "dir": "out",
+        "switch": "/P9_15/toggle",
+        "io": "/P9_15/io",
+        "path": "/sys/class/gpio/gpio48"
+    },
+    "P9_16": {
+        "gpio": "gpio51",
+        "pin": "P9_16",
+        "dir": "out",
+        "switch": "/P9_16/toggle",
+        "io": "/P9_16/io",
+        "path": "/sys/class/gpio/gpio51"
+    },
+    "P9_17": {
+        "gpio": "gpio5",
+        "pin": "P9_17",
+        "dir": "out",
+        "switch": "/P9_17/toggle",
+        "io": "/P9_17/io",
+        "path": "/sys/class/gpio/gpio5"
+    },
+    "P9_18": {
+        "gpio": "gpio4",
+        "pin": "P9_18",
+        "dir": "out",
+        "switch": "/P9_18/toggle",
+        "io": "/P9_18/io",
+        "path": "/sys/class/gpio/gpio4"
+    },
+    "P9_19": {
+        "gpio": "gpio13",
+        "pin": "P9_19",
+        "dir": "out",
+        "switch": "/P9_19/toggle",
+        "io": "/P9_19/io",
+        "path": "/sys/class/gpio/gpio13"
+    },
+    "P9_20": {
+        "gpio": "gpio12",
+        "pin": "P9_20",
+        "dir": "out",
+        "switch": "/P9_20/toggle",
+        "io": "/P9_20/io",
+        "path": "/sys/class/gpio/gpio12"
+    },
+    "P9_21": {
+        "gpio": "gpio3",
+        "pin": "P9_21",
+        "dir": "out",
+        "switch": "/P9_21/toggle",
+        "io": "/P9_21/io",
+        "path": "/sys/class/gpio/gpio3"
+    },
+    "P9_22": {
+        "gpio": "gpio2",
+        "pin": "P9_22",
+        "dir": "out",
+        "switch": "/P9_22/toggle",
+        "io": "/P9_22/io",
+        "path": "/sys/class/gpio/gpio2"
+    },
+    "P9_23": {
+        "gpio": "gpio49",
+        "pin": "P9_23",
+        "dir": "out",
+        "switch": "/P9_23/toggle",
+        "io": "/P9_23/io",
+        "path": "/sys/class/gpio/gpio49"
+    },
+    "P9_24": {
+        "gpio": "gpio15",
+        "pin": "P9_24",
+        "dir": "out",
+        "switch": "/P9_24/toggle",
+        "io": "/P9_24/io",
+        "path": "/sys/class/gpio/gpio15"
+    },
+    "P9_25": {
+        "gpio": "gpio117",
+        "pin": "P9_25",
+        "dir": "out",
+        "switch": "/P9_25/toggle",
+        "io": "/P9_25/io",
+        "path": "/sys/class/gpio/gpio117"
+    },
+    "P9_26": {
+        "gpio": "gpio14",
+        "pin": "P9_26",
+        "dir": "out",
+        "switch": "/P9_26/toggle",
+        "io": "/P9_26/io",
+        "path": "/sys/class/gpio/gpio14"
+    },
+    "P9_27": {
+        "gpio": "gpio115",
+        "pin": "P9_27",
+        "dir": "out",
+        "switch": "/P9_27/toggle",
+        "io": "/P9_27/io",
+        "path": "/sys/class/gpio/gpio115"
+    },
+    "P9_28": {
+        "gpio": "gpio123",
+        "pin": "P9_28",
+        "dir": "out",
+        "switch": "/P9_28/toggle",
+        "io": "/P9_28/io",
+        "path": "/sys/class/gpio/gpio123"
+    },
+    "P9_29": {
+        "gpio": "gpio121",
+        "pin": "P9_29",
+        "dir": "out",
+        "switch": "/P9_29/toggle",
+        "io": "/P9_29/io",
+        "path": "/sys/class/gpio/gpio121"
+    },
+    "P9_30": {
+        "gpio": "gpio122",
+        "pin": "P9_30",
+        "dir": "out",
+        "switch": "/P9_30/toggle",
+        "io": "/P9_30/io",
+        "path": "/sys/class/gpio/gpio122"
+    }
+}

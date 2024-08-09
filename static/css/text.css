@@ -1,0 +1,19 @@
+/** FONT STYLES */
+.header h1 {
+    font-size: 36px;
+    padding: var(--global-padding);
+    white-space: nowrap;
+}
+
+h2 {
+    font-size: 22px;
+    padding: var(--global-padding);
+    white-space: nowrap;
+}
+
+h3 {
+    font-size: 16;
+    white-space: nowrap;
+    margin-right: 20px;
+    color: var(--text-main-color);
+}

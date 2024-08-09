@@ -1,0 +1,84 @@
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1200px) {
+    .flex_horizontal {
+        flex-direction: column;
+    }
+
+    .wide_table {
+        display: none;
+    }
+
+    .narrow_table {
+        display: block;
+    }
+
+    #navcpu_container {
+        flex-direction: column;
+    }
+
+    #navbar {
+        width: 100%;
+        justify-content: center;
+        border-bottom: 1px solid gray;
+    }
+
+    #cpuram_container {
+        justify-content: center;
+        width: 100%;
+        height: 70px;
+    }
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+
+    .flex_horizontal {
+        flex-direction: row;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+}
+
+
+/* Content display modifications when screen width less than 650 pixels */
+@media screen and (max-width: 600px) {
+    #navbar a {
+        width: 100%;
+    }
+
+    #nav_links a {
+        display: none;
+        text-align: center;
+    }
+
+    #nav_links, #drop_links {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%
+            /* Align items to the start */
+    }
+
+    #drop_links a {
+        border-top: 1px solid gray;
+    }
+
+    .cpuram {
+        width: 50%;
+        font-size: 1.0rem;
+    }
+
+    #site_name {
+        display: none;
+    }
+
+    #a_menu {
+        display: block;
+    }
+}

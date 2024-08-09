@@ -1,0 +1,64 @@
+#volt_table {
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#volt_table td, #volt_table th {
+    padding: 8px;
+    width: 30%;
+}
+
+#volt_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#volt_table tr:hover {
+    background-color: #ddd;
+}
+
+#volt_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--site-main-color);
+    color: var(--text-main-color);
+}
+
+.table_container {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Global table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td, table th {
+    padding: 10px;
+    cursor: pointer;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table th {
+    text-align: left;
+    background-color: var(--site-main-color);
+    color: var(--text-main-color);
+}
+
+.key_cell {
+    font-weight: bold;
+}
+
+.empty_cell {
+    width: 5%;
+}
+
+.value_cell {
+    width: 50%;
+}

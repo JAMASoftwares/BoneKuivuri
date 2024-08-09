@@ -1,0 +1,228 @@
+/** LAYOUT AND COLORS */
+html * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  padding: 0px;
+  background: var(--site-color-bg);
+}
+
+/* Header/Blog Title */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background: var(--site-main-color);
+  color: var(--text-main-color);
+}
+
+/* Common container for area below header (navigation bar / cpu-ram usage) */
+#navcpu_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0px;
+  background-color: var(--navbar-color-bg);
+}
+
+#navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#cpuram_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.cpuram {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+  align-items: center;
+  width: 180px;
+}
+
+.cpu {
+  cursor: progress;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 70%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 30%;
+  background-color: var(--site-color-bg);
+  padding-left: 20px;
+}
+
+/* Center column */
+.centercolumn {
+  width: 100%;
+  background-color: var(--site-color-bg);
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: var(--card-bg-color);
+  padding: 20px;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+.accordion_panel {
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  /* Just for visibility */
+  transition: max-height 0.5s ease-out;
+}
+
+.accordion_panel.open {
+  max-height: 500px;
+  /* Adjust as needed */
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: var(--site-subcolor-first);
+  margin-top: 20px;
+}
+
+#gpio_panel {
+  justify-content: space-between;
+  background-image: url('/static/img/bbb_500x600_bw.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+#setio_panel {
+  justify-content: space-between;
+  background-image: url('/static/img/bbb_500x600_bw.png');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center;
+}
+
+#vtable {
+  display: block;
+}
+
+#systable {
+  display: none;
+  overflow: scroll;
+}
+
+.pin_layout {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#barplot {
+  position: relative;
+  display: none;
+}
+
+#lineplot {
+  position: relative;
+  display: none;
+}
+
+
+#barchart_canvas {
+  display: block;
+}
+
+#linechart_canvas {
+  display: block;
+}
+
+.flex_horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_horizontal_right {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flex_vertical {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.wide_table {
+  display: block;
+}
+
+.narrow_table {
+  display: none;
+}
+
+
+
+
+
+/* For animations */
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%)
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,165 @@
+/* Fake image */
+.fakeimg {
+    background-color: var(--site-subcolor-second);
+    width: 100%;
+    padding: 20px;
+}
+
+i {
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    margin-right: -10px;
+}
+
+.icon_cpu {
+    background: url("/static/img/icon_cpu_gray.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 5px;
+    /* Other styles here */
+}
+
+.icon_ram {
+    background: url("/static/img/icon_ram_gray.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* Other styles here */
+}
+
+
+.site-logo {
+    height: 70px;
+}
+
+#bb-board {
+    width: 80%;
+}
+
+#jamasf {
+    height: 100px;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.zoom1 {
+    transition: transform 0.6s ease-in-out;
+    /* Smooths the transition effects */
+}
+
+.zoom1:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    z-index: 10;
+}
+
+/** Gallery styles for equal size clickable full-screen images */
+.gallery-grid {
+    display: grid;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+.gallery-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    flex-flow: wrap;
+}
+
+.gallery-flex img {
+    margin: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+.gallery-grid img {
+    margin: 5px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.gallery img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.zoomable-image {
+    transition: transform 0.5s, cursor 0.5s;
+    transition: transform 0.6s ease-in-out;
+    /* Smooths the transition effects */
+    max-width: 100%;
+    max-height: 100vh;
+    cursor: pointer;
+}
+
+
+/** Styles for simple image gallery with thumbnails */
+.gallery-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.main-image img, .thumb {
+    border-radius: 5px;
+    /* Adds rounded corners to all images */
+    transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+    /* Smooths the transition effects */
+}
+
+.main-image img {
+    width: 100%;
+    height: 60vh;
+    object-fit: contain;
+}
+
+.thumbnails {
+    display: flex;
+    flex-direction: row;
+}
+
+.thumb {
+    height: 70px;
+    /* Thumbnail size */
+    margin: 10px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* Smooth zoom-in effect */
+    /* Indicates that thumbnails are clickable */
+}
+
+.thumb:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges thumbnails on hover for a more dynamic effect */
+    box-shadow: 0px 0px 8px var(--site-subcolor-first);
+    /* Enhances the shadow on hover for a popping effect */
+}
+
+.responsive-100 {
+    width: 100%;
+}
+
+.capture {
+    margin-bottom: 10px;
+}

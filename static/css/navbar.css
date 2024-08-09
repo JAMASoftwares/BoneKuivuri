@@ -1,0 +1,105 @@
+/* NAVIGATION BAR styles: Everything under "navbar" class, nothing else */
+
+#nav_links, #drop_links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#nav_links a, #navcpu_container a {
+    padding: var(--global-padding-a);
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--navbar-font-size);
+    color: var(--button-text-color);
+    white-space: nowrap;
+}
+
+#nav_links a {
+    cursor: pointer;
+    position: relative;
+    min-width: 160px;
+}
+
+#nav_links a.open {
+    display: flex;
+}
+
+#nav_links a:hover {
+    background-color: var(--navbar-color-active);
+    color: var(--button-text-color);
+}
+
+.links.active_page {
+    color: var(--button-text-color);
+    font-weight: 900;
+    background-color: var(--site-main-color);
+}
+
+#a_links.active_drop {
+    color: var(--button-text-color);
+    font-weight: 900;
+    background-color: var(--site-subcolor-first);
+}
+
+
+#drop_links {
+    display: none;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: center;
+}
+
+#drop_links a {
+    padding: var(--global-padding-b);
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    font-size: var(--navbar-submenu-font-size);
+    color: var(--button-text-color);
+    white-space: nowrap;
+}
+
+#drop_links a:not(:last-child) {
+    border-right: 1px solid gray;
+}
+
+#drop_links a:hover {
+    background-color: var(--navbar-color-active);
+    color: var(--button-text-color);
+}
+
+#drop_links.open {
+    display: flex;
+    background-color: var(--site-subcolor-first);
+}
+
+#a_menu {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: var(--navbar-font-size);
+    color: var(--button-text-color);
+}
+
+
+/* Selection indicator in left side of accordion menu items */
+#navbar a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.5rem;
+    background: linear-gradient(to top, var(--site-subcolor-first) 0%, transparent 100%);
+    transform: translateY(0.5rem);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+/* To make above declared efect visible when hovering */
+#navbar a:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+}
