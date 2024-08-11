@@ -1,5 +1,26 @@
-# BoneKuivuri - Embedded microcontroller project
+# BoneKuivuri - Embedded single board computer project (Beaglebone Black)
+
 Python Flask application for industry process control using surveillance IP-camera snapshots
+
+## Device info
+Beaglebone Black (BeagleBoard.org)
+Debian GNU/Linux 11 - Bullseye IoT Image 2023-09-02
+
+## Techologies
+- Python Flask web server application
+- Web client application interface (HTML, CSS, JavaScript)
+
+## Python (libraries and dependencies)
+Program is running by Python 3.9.2
+
+Adafruit_BBIO       1.2.0
+Flask               1.1.2
+Flask_Cors          4.0.1
+Flask_SocketIO      5.3.6
+Pillow              10.4.0
+psutil              6.0.0
+py_cpuinfo          9.0.0
+
 
 ## Functionalities
 - System information checking, GPIO pin map, and Beaglebone Black gallery.
