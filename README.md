@@ -37,6 +37,16 @@ If value exceeds the pre-configured threshold value, IP-camera snapshot will be 
 1. Frequency of snapshots is limited
 2. When signal voltage exceeds the configured threshold, snapshot will be triggered if a time stamp of previous snapshot is more than a minimum value (e.g. 60 minutes)
 3. If the signal voltage remains permanently higher than the threshold new snapshot WILL NOT BE triggered, although configured minimum snapshot frequency value (e.g. 60 minutes) has been exceeded.
+
+### Manual Snapshots
+![Manual Snapshots](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_ManualSnapshots.PNG?raw=true)
+### Triggered snapshots
+![Triggered snapshots](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_TriggeredSnapshots.PNG?raw=true)
    
 ## Web interface for the review of IP-camera snapshot images and BBB system information.
-![Pin map](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_PinMap.PNG?raw=true)
+### GPIO Map
+![GPIO Map](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_PinMap.PNG?raw=true)
+### System Information
+![System Information](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_SystemInfo.PNG?raw=true)
+### Beaglebone Gallery
+![Beaglebone Gallery](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_BBBGallery.PNG?raw=true)
