@@ -6,7 +6,7 @@ Python Flask application for industry process control using surveillance IP-came
 Beaglebone Black (BeagleBoard.org)
 Debian GNU/Linux 11 - Bullseye IoT Image 2023-09-02
 
-## Techologies
+## Technologies
 - Python Flask web server application
 - Web client application interface (HTML, CSS, JavaScript)
 
