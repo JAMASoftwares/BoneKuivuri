@@ -1,4 +1,4 @@
-# BoneKuivuri - Embedded single board computer project (Beaglebone Black)
+# BoneKuivuri - Embedded single-board-computer project (Beaglebone Black)
 
 Python Flask application for industry process control using surveillance IP-camera snapshots
 
