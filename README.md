@@ -39,3 +39,4 @@ If value exceeds the pre-configured threshold value, IP-camera snapshot will be 
 3. If the signal voltage remains permanently higher than the threshold new snapshot WILL NOT BE triggered, although configured minimum snapshot frequency value (e.g. 60 minutes) has been exceeded.
    
 ## Web interface for the review of IP-camera snapshot images and BBB system information.
+[Pin map](https://github.com/JAMASoftwares/BoneKuivuri/blob/main/screenshots/BoneKuivuri_PinMap.PNG?raw=true)
