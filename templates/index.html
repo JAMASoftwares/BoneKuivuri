@@ -129,54 +129,23 @@
             <div id="gpio_panel" class="flex_horizontal accordion_panel">
                 <div class="pin_layout" id='chipp9'>
                     {% for key, value in result['P9'].items() %}
-                        {% if value[2] == '0' and value[0] != "in" %}
-                        <a href={{ value[3] }} class='pin zoom state_0'>{{ key }}</a>
-                        {% elif value[2] == '1' and value[0] != "in" %}
-                        <a href={{ value[3] }} class='pin zoom state_1'>{{ key }}</a>
+                        {% if value[1] == '0' and value[0] != "in" %}
+                        <a href={{ value[2] }} class='pin zoom state_0'>{{ key }}</a>
+                        {% elif value[1] == '1' and value[0] != "in" %}
+                        <a href={{ value[2] }} class='pin zoom state_1'>{{ key }}</a>
                         {% else %}
-                        <a href={{ value[3] }} class='pin state_d'>{{ key }}</a>
+                        <a href={{ value[2] }} class='pin state_d'>{{ key }}</a>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div class="pin_layout" id='chipp8'>
                     {% for key, value in result['P8'].items() %}
-                        {% if value[2] == '0' and value[0] != "in" %}
-                        <a href={{ value[3] }} class='pin zoom state_0'>{{ key }}</a>
-                        {% elif value[2] == '1' and value[0] != "in" %}
-                        <a href={{ value[3] }} class='pin zoom state_1'>{{ key }}</a>
+                        {% if value[1] == '0' and value[0] != "in" %}
+                        <a href={{ value[2] }} class='pin zoom state_0'>{{ key }}</a>
+                        {% elif value[1] == '1' and value[0] != "in" %}
+                        <a href={{ value[2] }} class='pin zoom state_1'>{{ key }}</a>
                         {% else %}
-                        <a href={{ value[3] }} class='pin state_d'>{{ key }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-        <!-- CARD: RIGHT-C -->
-        <div class="card">
-            <div class="flex_horizontal">
-                <h2>ASETUS I/O</h2>
-                <label class="switch">
-                    <input id='setio_toggle' type="checkbox">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div id="setio_panel" class="flex_horizontal accordion_panel">
-                <div class="pin_layout">
-                    {% for key, value in result['P9'].items() %}
-                        {% if value[0] == 'out' %}
-                        <a href={{ value[1] }} class='pin zoom state_out'>{{ key }}</a>
-                        {% elif value[0] == 'in' %}
-                        <a href={{ value[1] }} class='pin zoom state_in'>{{ key }}</a>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="pin_layout">
-                    {% for key, value in result['P8'].items() %}
-                        {% if value[0] == 'out' %}
-                        <a href={{ value[1] }} class='pin zoom state_out'>{{ key }}</a>
-                        {% elif value[0] == 'in' %}
-                        <a href={{ value[1] }} class='pin zoom state_in'>{{ key }}</a>
+                        <a href={{ value[2] }} class='pin state_d'>{{ key }}</a>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -197,7 +166,6 @@
     <!-- INCLUDE JAVASCRIPTS -->
     <script type="text/javascript" src={{ url_for( 'static', filename='js/global.js') }}></script>
     <script type="text/javascript" src={{ url_for( 'static', filename='js/gpioctrl.js') }}></script>
-    <script type="text/javascript" src={{ url_for('static', filename='js/gpiosetio.js') }}></script>
     <script type="text/javascript" src={{ url_for( 'static', filename='js/gallery.js') }}></script>
     <script type="text/javascript" src={{ url_for( 'static', filename='js/table.js') }}></script>
 </div>

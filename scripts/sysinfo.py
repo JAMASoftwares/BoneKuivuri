@@ -74,25 +74,30 @@ def get_disk_info_as_dict():
     return sys_data
 
 def get_net_info_as_dict():
+    import psutil
+    import socket
+
     net_data = {}
-    # Network information
     # Get all network interfaces (virtual and physical)
     if_addrs = psutil.net_if_addrs()
-    for interface_name, interface_addresses in if_addrs.items():
+    for interface in if_addrs.items():
+        interface_name = interface[0]
         if_data = {}
-        for address in interface_addresses:
-            if str(address.family) == 'AddressFamily.AF_INET':
+        for address in interface[1]:
+            if address.family == socket.AF_INET:
                 if_data['ip_address'] = address.address
                 if_data['netmask'] = address.netmask
                 if_data['broadcast_ip'] = address.broadcast
-            elif str(address.family) == 'AddressFamily.AF_PACKET':
+            elif getattr(psutil, 'AF_LINK', None) is not None and address.family == psutil.AF_LINK:
                 if_data['mac_address'] = address.address
-        
+            elif hasattr(socket, 'AF_PACKET') and address.family == socket.AF_PACKET:
+                if_data['mac_address'] = address.address
         net_data[interface_name] = if_data
-        
-    # get IO statistics since boot
+
     net_io = psutil.net_io_counters()
     net_data['total_bytes_sent'] = get_size(net_io.bytes_sent)
     net_data['total_bytes_received'] = get_size(net_io.bytes_recv)
-    
+
+    #print(net_data)
+
     return net_data

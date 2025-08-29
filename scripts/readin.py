@@ -1,21 +1,23 @@
-import Adafruit_BBIO.ADC as ADC
-import Adafruit_BBIO.GPIO as GPIO
+import gpiod
+from gpiod.line import Direction, Value
+import os
 
-ain_pin = "AIN5"
-cam_led = "P8_11"
-
-ADC.setup()
-GPIO.setup(cam_led, GPIO.OUT)
 
 def readAinValue():
-    value = ADC.read(ain_pin)
+    try:
+        ain_path = "/sys/bus/iio/devices/iio:device0/in_voltage5_raw"
+        with open(ain_path, "r") as f:
+            raw_value = int(f.read().strip())
 
-    if value > 0.2:
-        GPIO.output(cam_led, GPIO.HIGH)
-    else:
-        GPIO.output(cam_led, GPIO.LOW)
+        # BeagleBone Black analog input max voltage is 1.8V (12 bit ADC: 0-4095)
+        voltage = (raw_value / 4095.0) * 1.8
 
-    return value
+        return voltage
+
+    except Exception as e:
+        print(f"Error reading AIN5 voltage from sysfs: {e}")
+        return 0.0
+
 
 
 """
