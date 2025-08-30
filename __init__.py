@@ -32,7 +32,7 @@ def initialize_all_pins():
                 chip_configs[chip] = {}
             if dir_str == "out":
                 chip_configs[chip][line_offset] = LineSettings(direction=Direction.OUTPUT, output_value=Value.INACTIVE)
-                pin_data["state"] = 0
+                pin_data["state"] = '0'
             elif dir_str == "in":
                 chip_configs[chip][line_offset] = LineSettings(direction=Direction.INPUT)
                 pin_data["state"] = None

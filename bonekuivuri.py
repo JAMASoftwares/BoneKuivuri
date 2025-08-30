@@ -99,15 +99,16 @@ def index():
     gpioDataP8 = {}
 
     for key, val in all_pins.items():
-        state = val.get("state", 0)  # Stored output state 0 or 1
+        pin_state = val.get("state", None)
+        state = '0' if pin_state == Value.INACTIVE else '1' if pin_state == Value.ACTIVE else pin_state
         dir_str = val.get("dir", "")
         switch_val = val.get("switch", "")
 
         # Assign to correct pin group based on key prefix
         if key.startswith("P9"):
-            gpioDataP9[key] = (dir_str, str(state), switch_val)
+            gpioDataP9[key] = (dir_str, state, switch_val)
         elif key.startswith("P8"):
-            gpioDataP8[key] = (dir_str, str(state), switch_val)
+            gpioDataP8[key] = (dir_str, state, switch_val)
 
     templateData = {"P9": gpioDataP9, "P8": gpioDataP8}
 

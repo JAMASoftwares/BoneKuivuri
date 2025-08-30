@@ -43,6 +43,9 @@ for (a of gpio_pins) {
 function updateGpioPinStatus(pinData) {
     pin_name = pinData['pin'];
     state = pinData['state'];
+
+    // console.log(pin_name, state)
+
     for (const pin of gpio_pins) {
         if (pin.textContent.match(pin_name)) {
             if (state.match("in")) {
